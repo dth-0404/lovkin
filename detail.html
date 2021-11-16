@@ -1,0 +1,937 @@
+﻿<!DOCTYPE htm>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lov'kin</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon-lovkin.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/js-util.js">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/boostrap.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- Navbar mobile -->
+        <nav class="navbar navbar-mobile navbar-expand-lg navbar-light">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-10">
+                <a class="navbar-brand" href="./index.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <div class="col-7">
+                <header>
+                    <a class="logo" href="./index.html">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                    <div class="search">
+                        <input type="text" placeholder="Nhập từ khóa bạn đang tìm kiếm...">
+                        <span><i class="fa fa-search"></i></span>
+                    </div>
+                    <div class="user">
+                        <span><i class="fa fa-user-circle-o fa-2x"></i></span>
+                        <div class="text">
+                            <p>Xin chào bạn!.</p>
+                            <p><button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button><span
+                                    class="pl-1 pr-1">/</span>
+                                <button data-toggle="modal" data-target="#dangky">Đăng ký</button></p>
+                        </div>
+                    </div>
+                    <div class="shopping-cart">
+                        <a href="./cart.html">
+                            <button type="button" class="btn" style="position: relative;">
+                                <span><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></span>
+                                <span class="badge badge-danger">0</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="languages dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="./img/vietnam-flag.png" alt="">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">
+                                <img src="./img/vietnam-flag.png" alt="">
+                                <p class="pl-2">Tiếng Việt</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./img/korea-flag.png" alt="">
+                                <p class="pl-2">Korean</p>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="col-2">
+                <button id="btn-1" class="navbar-toggler d-block" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation" onclick="animationIn()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="btn-2" class="navbar-toggler d-none" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation" onclick="animationOut()" style="color: #FFFFFF;">
+                    <span class="fa fa-times"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="blur">
+                    <ul id="navBar" class="navbar-nav mr-auto mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cleansing.html">CLEANSING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MAKE UP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SKINCARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BODYCARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./intro.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">BLOG</a>
+                        </li>
+                        <div class="user pt-3 border-top">
+                            <span class="pb-3"><i class="fa fa-user-circle-o fa-2x"></i></span>
+                            <div class="text">
+                                <p>Xin chào bạn!.</p>
+                                <button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button>
+                                <button data-toggle="modal" data-target="#dangky">Đăng ký</button>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End navbar mobile-->
+        <!-- Header -->
+        <header>
+            <a class="logo" href="./index.html">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Nhập từ khóa bạn đang tìm kiếm...">
+                <span><i class="fa fa-search"></i></span>
+            </div>
+            <div class="user">
+                <span><i class="fa fa-user-circle-o fa-2x"></i></span>
+                <div class="text">
+                    <p>Xin chào bạn!.</p>
+                    <p><button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button><span
+                            class="pl-1 pr-1">/</span>
+                        <button data-toggle="modal" data-target="#dangky">Đăng ký</button></p>
+                </div>
+            </div>
+            <div class="shopping-cart">
+                <a href="./cart.html">
+                    <button type="button" class="btn" style="position: relative;">
+                        <span><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></span>
+                        <span class="badge badge-danger">0</span>
+                    </button>
+                </a>
+            </div>
+            <div class="languages dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="./img/vietnam-flag.png" alt="">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">
+                        <img src="./img/vietnam-flag.png" alt="">
+                        <p class="pl-2">Tiếng Việt</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./img/korea-flag.png" alt="">
+                        <p class="pl-2">Korean</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-pc navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cleansing.html">CLEANSING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MAKE UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SKINCARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BODYCARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./intro.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End navbar -->
+    </div>
+    <!-- End header -->
+    <!-- Detail -->
+    <div class="detail">
+        <div class="detail__image row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="show">
+                    <img class="my-slides" src="./img/Image 39.png">
+                    <img class="my-slides" src="./img/Image 41.png">
+                    <img class="my-slides" src="./img/Image 42.png">
+                    <img class="my-slides" src="./img/Image 39.png">
+                    <img class="my-slides" src="./img/Image 41.png">
+                </div>
+
+                <div class="more__image">
+                    <button class="prev" onclick="plusDivs(-1)">❮</button>
+                    <button class="btn btn-1 btn-img" onclick="currentDiv(1)">
+                    </button>
+                    <button class="btn btn-2 btn-img" onclick="currentDiv(2)">
+                    </button>
+                    <button class="btn btn-3 btn-img" onclick="currentDiv(3)">
+                    </button>
+                    <button class="btn btn-4 btn-img" onclick="currentDiv(4)">
+                    </button>
+                    <button class="btn btn-5 btn-img" onclick="currentDiv(5)">
+                    </button>
+                    <button class="next" onclick="plusDivs(1)">❯</button>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="detail__content">
+                    <h6>Whitening Cream dưỡng trắng sáng da Lovkin</h6>
+                    <div class="review">
+                        <p>4.8</p>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                        <p>Đã bán 1000</p>
+                    </div>
+                    <hr class="my-2">
+                    <div class="prices d-flex justify-content-between align-items-center">
+                        <p id="price" class="pr-3"><span class="pr-3">GIÁ:</span>790.000 VND</p>
+                        <button id="minus" onclick="minus()">
+                            <span class="d-flex"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </button>
+                        <p id="soluong" style="font-size: 1.75rem;color: #727C8E;">1</p>
+                        <button id="plus" onclick="plus()">
+                            <span class="d-flex"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </button>
+                        <p style="font-size: 21px;line-height: 41px;color: #5C5B58;">
+                            Chỉ còn <i class="fa fa-angle-left" aria-hidden="true"></i>50 sản phẩm </p>
+                    </div>
+                    <hr class="my-2">
+                    <div class="btn-buy row justify-content-center align-items-center">
+                        <button class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">THÊM VÀO GIỎ HÀNG</button>
+                        <button class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">ĐẶT HÀNG NGAY</button>
+                    </div>
+                    <hr class="my-2">
+                    <div class="uses">
+                        <p>CÔNG DỤNG</p>
+                        <p>
+                            - Cung cấp nước cho da <br> - Thổi bay nếp nhăn, ngăn ngừa lão hóa <br> - Phục hồi và tái
+                            tạo da, căng tràn sức sống <br> - Giúp da trắng sáng và tươi tắn hơn <br> - Làm mờ các vết
+                            thâm, nám trên da <br> - Dùng như một sản
+                            phẩm điều chỉnh da chuyên sâu trong các bước dưỡng da hằng ngày <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="detail__products row align-items-center justify-content-center">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4">
+                <div class="products__item">
+                    <img src="./img/lovkin lip tint 01 P.png" alt="">
+                    <div class="review d-flex justify-content-center align-items-center">
+                        <span><i class=" fa fa-star"aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <p class="pl-1">7504</p>
+                    </div>
+                </div>
+            </div>
+            <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4">
+                <div class="products__item">
+                    <img src="./img/그린티클렌징폼.png" alt="">
+                    <div class="review d-flex justify-content-center align-items-center">
+                        <span><i class=" fa fa-star"aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <p class="pl-1">7504</p>
+                    </div>
+                </div>
+            </div>
+            <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4">
+                <div class="products__item">
+                    <img src="./img/그린티스네일슬리핑팩.png" alt="">
+                    <div class="review d-flex justify-content-center align-items-center">
+                        <span><i class=" fa fa-star"aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <p class="pl-1">7504</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product__text col-xl-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="product__text--item row">
+                    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="checkbox" class="checkbox">
+                        <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-10 col-10">
+                            <p>Son Lì Lovkin Màu EK009 <span style="white-space: nowrap;">400.000 đ</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__text--item row">
+                    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="checkbox" class="checkbox">
+                        <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-10 col-10">
+                            <p>Son Lì Lovkin Màu EK009 <span style="white-space: nowrap;">400.000 đ</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__text--item row">
+                    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="checkbox" class="checkbox">
+                        <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-10 col-10">
+                            <p>Son Lì Lovkin Màu EK009 <span style="white-space: nowrap;">400.000 đ</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p>Total: <span>1.000.000 đ</span></p>
+                <a href="./cart.html" class="mx-auto"><button>THÊM VÀO GIỎ HÀNG</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- End detail -->
+    <!-- Tab detail -->
+    <div class="detail-tab">
+        <div class="menu row">
+            <a href="#description" class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-12">
+                    <p>Mô tả sản phẩm</p>
+                </div>
+            </a>
+            <a href="#question" class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-12">
+                    <p>Câu hỏi thường gặp</p>
+                </div>
+            </a>
+            <a href="#review" class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-12">
+                    <p>Review khách hàng</p>
+                </div>
+            </a>
+            <hr>
+        </div>
+        <div id="description">
+            <h6>THÀNH PHẦN</h6>
+            <p>
+                – Chiết xuất từ trái Goji: Chứa 20 loại Amino axít và vitamin, hàm lượng sắt cao, ngăn chặn
+                lão hóa da,
+                tăng cường sản xuất collagen, dưỡng ẩm, dưỡng trắng da. <br>
+                – Chiết xuất hoa anh đào: Tăng cường sản xuất collagen và elastin, giúp cải thiện độ đàn
+                hồi, săn chắc
+                cho da, giảm nếp nhăn, hồi sinh làn da mệt mỏi. <br>
+                – Chiết xuất quả lựu: Tăng cường collagen và elastin, ngăn ngừa lão hóa sớm, giàu tính kháng
+                khuẩn, chất
+                giữ độ ẩm và chất chống oxy hóa, cho làn da khỏe mạnh. <br>
+                – Chiết xuất từ quả Acai: Chứa nhiều Anthocyanins, Phenols, Flavonoids, Omega, Vitamin và
+                khoáng chất,
+                làm chậm quá trình lão hóa, chăm sóc da chống lão hóa. <br>
+                – Chiết xuất lá bạc hà: Giàu axít salicylic và hoạt chất kháng khuẩn tự nhiên, giúp loại bỏ
+                tế bào chết,
+                làm sạch da, làm mờ thâm mụn, sạm nám. <br>
+                <span>Và một số thành phần khác như:</span> <br>
+                Water, Glycerin, PEG/PPG-17/6 Copolymer, Propanediol, 1,2-Hexanediol, Butylene Glycol,
+                Panthenol, Sodium
+                hyaluronate, Hyaluronic Acid, Hydrolyzed Collagen, Aspalathus Linearis Extract, Sea Whip
+                Extract,Plankton Extract, Jania Rubens Extract, Chondrus Crispus Extract, PEG- 60
+                Hydrogenated Castor
+                Oil, Allantoin, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin, Fragrance.
+            </p>
+            <h6>CÔNG DỤNG</h6>
+            <p>
+                - Cung cấp nước cho da <br>
+                - Thổi bay nếp nhăn, ngăn ngừa lão hóa <br>
+                - Phục hồi và tái tạo da, căng tràn sức sống <br>
+                - Giúp da trắng sáng và tươi tắn hơn <br>
+                - Làm mờ các vết thâm, nám trên da <br>
+                - Dùng như một sản phẩm điều chỉnh da chuyên sâu trong các bước dưỡng da hằng ngày <br>
+            </p>
+            <h6>HƯỚNG DẪN SỬ DỤNG</h6>
+            <p>
+                Sau làm sạch da, thoa một lượng sản phẩm vừa đủ lên vùng mặt và cổ, massage nhẹ nhàng cho
+                đến khi sản
+                phẩm được hấp thụ hoàn toàn vào da. Sử dụng mỗi ngày 2 lần vào buổi sáng và buổi tối để có
+                hiệu quả tốt
+                nhất. Các ống đã mở nên được bảo quản trong tủ lạnh.
+            </p>
+            <h6>HẠN SỬ DỤNG</h6>
+            <p>
+                24 tháng kể từ ngày sản xuất
+            </p>
+            <h6>BẢO QUẢN</h6>
+            <p>
+                Nơi khô mát, tránh ánh sáng trực tiếp và để xa tầm tay trẻ em
+            </p>
+        </div>
+        <hr>
+        <div id="question">
+            <h6>CÂU HỎI THƯỜNG GẶP VỀ SẢN PHẨM</h6>
+            <hr class="my-3" style="margin: unset;">
+            <div class="question__item row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div class="left">
+                        <p class="pb-2">Sản phẩm này có thể dùng vào buổi sáng được không?</p>
+                        <p>Gửi bởi <span>khách hàng Lovkin</span> 20/7/2020</p>
+                        <a href="#"><button>Trả lời câu hỏi</button></a>
+                        <p>Lovkin có thể sử dụng sáng tối sau khi skin care da</p>
+                        <p class="pt-2">Gửi bởi <span>Lovkin</span> 21/7/2020</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="right">
+                        <p>Câu hỏi này có hữu ích với bạn không?</p>
+                        <div class="answer">
+                            <button>Yes (0)</button>
+                            <button>No (0)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-3" style="margin: unset;">
+            <div class="question__item row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div class="left">
+                        <p class="pb-2">Sản phẩm này có thể dùng vào buổi sáng được không?</p>
+                        <p>Gửi bởi <span>khách hàng Lovkin</span> 20/7/2020</p>
+                        <a href="#"><button>Trả lời câu hỏi</button></a>
+                        <p>Lovkin có thể sử dụng sáng tối sau khi skin care da</p>
+                        <p class="pt-2">Gửi bởi <span>Lovkin</span> 21/7/2020</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="right">
+                        <p>Câu hỏi này có hữu ích với bạn không?</p>
+                        <div class="answer">
+                            <button>Yes (0)</button>
+                            <button>No (0)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4" style="margin: unset;">
+            <div class="question__item row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div class="left">
+                        <p class="pb-2">Sản phẩm này có thể dùng vào buổi sáng được không?</p>
+                        <p>Gửi bởi <span>khách hàng Lovkin</span> 20/7/2020</p>
+                        <a href="#"><button>Trả lời câu hỏi</button></a>
+                        <p>Lovkin có thể sử dụng sáng tối sau khi skin care da</p>
+                        <p class="pt-2">Gửi bởi <span>Lovkin</span> 21/7/2020</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="right">
+                        <p>Câu hỏi này có hữu ích với bạn không?</p>
+                        <div class="answer">
+                            <button>Yes (0)</button>
+                            <button>No (0)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4" style="margin: unset;">
+            <div class="ask">
+                <form>
+                    <input type="text" class="form-control" placeholder="Nhập câu hỏi tại đây...">
+                    <button type="submit" class="btn btn-primary">Gửi câu hỏi</button>
+                </form>
+            </div>
+        </div>
+        <div id="review">
+            <div class="count row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="left">
+                        <p>Đánh giá (4)</p>
+                        <p>5/5</p>
+                        <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                        <div></div>
+                        <p>( 50 )</p>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    <div class="right">
+                        <div class="star-5 star">
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <div class="full">
+                                <div class="percent"></div>
+                            </div>
+                            <p>100%</p>
+                        </div>
+                        <div class="star-4 star">
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <div class="full">
+                                <div class="percent"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="star-3 star">
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <div class="full">
+                                <div class="percent"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="star-2 star">
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <div class="full">
+                                <div class="percent"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="star-1 star">
+                            <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <div class="full">
+                                <div class="percent"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="py-3">Hình ảnh từ khách hàng (9)</p>
+            <div class="list__image">
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+                <div><img src="./img/Image -4.png" alt=""></div>
+            </div>
+            <p class="py-3">Đánh giá sản phẩm (10)</p>
+            <div class="comment d-flex align-items-center">
+                <div class="picture text-center">
+                    <div class="image"></div>
+                    <p>24-03-2020</p>
+                </div>
+                <div class="comment__detail">
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <p>Hàng chất lượng, giao hàng nhanh. Shop tư vấn nhiệt tình.</p>
+                    <div class="comment__image">
+                        <img src="./img/Image -7.png" alt="">
+                        <img src="./img/Image -7.png" alt="">
+                        <img src="./img/Image -7.png" alt="">
+                    </div>
+                </div>
+                <button>
+                    <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                </button>
+            </div>
+            <div class="reply-comment d-flex align-items-center">
+                <div class="picture text-center">
+                    <div class="image"></div>
+                    <p>24-03-2020</p>
+                </div>
+                <p>Cảm ơn bạn đã chọn mua hàng tại Sojilabs!. 😊</p>
+            </div>
+            <hr class="my-4" style="margin: unset;">
+            <div class="comment d-flex align-items-center">
+                <div class="picture text-center">
+                    <div class="image"></div>
+                    <p>24-03-2020</p>
+                </div>
+                <div class="comment__detail">
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-star yellow" aria-hidden="true"></i></span>
+                    <p>Hàng chất lượng, giao hàng nhanh. Shop tư vấn nhiệt tình.</p>
+                    <div class="comment__image">
+                        <img src="./img/Image -7.png" alt="">
+                        <img src="./img/Image -7.png" alt="">
+                        <img src="./img/Image -7.png" alt="">
+                    </div>
+                </div>
+                <button>
+                    <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                </button>
+            </div>
+            <div class="reply-comment d-flex align-items-center">
+                <div class="picture text-center">
+                    <div class="image"></div>
+                    <p>24-03-2020</p>
+                </div>
+                <p>Cảm ơn bạn đã chọn mua hàng tại Sojilabs!. 😊</p>
+            </div>
+            <hr class="my-4" style="margin: unset;">
+        </div>
+    </div>
+    <!-- End tab detail -->
+    <!-- Related product -->
+    <div class="related-product">
+        <div class="top">
+            <h2>SẢN PHẨM LIÊN QUAN</h2>
+        </div>
+        <div class="cleansing__product row">
+            <a href="./detail.html" class="col-xl-3 col-lg-6 col-md-6 col-xs-12">
+                <div class="cleansing__item">
+                    <img src="./img/Group 37453.png" alt="" width="90%" style="object-fit: cover; margin:auto;">
+                    <p>Kem dưỡng da Lovkin - Green tea</p>
+                    <div class="price row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>590.000 đ</p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>1.590.000 đ</p>
+                        </div>
+                    </div>
+                    <div class="review row align-items-center">
+                        <div class="star row align-items-center">
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <p>(50 đánh giá)</p>
+                        </div>
+                        <button>
+                            <p>XEM NGAY</p>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="./detail.html" class="col-xl-3 col-lg-6 col-md-6 col-xs-12">
+                <div class="cleansing__item">
+                    <img src="./img/Group 37453.png" alt="" width="90%" style="object-fit: cover; margin:auto;">
+                    <p>Kem dưỡng da Lovkin - Green tea</p>
+                    <div class="price row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>590.000 đ</p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>1.590.000 đ</p>
+                        </div>
+                    </div>
+                    <div class="review row align-items-center">
+                        <div class="star row align-items-center">
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <p>(50 đánh giá)</p>
+                        </div>
+                        <button>
+                            <p>XEM NGAY</p>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="./detail.html" class="col-xl-3 col-lg-6 col-md-6 col-xs-12">
+                <div class="cleansing__item">
+                    <img src="./img/Group 37453.png" alt="" width="90%" style="object-fit: cover; margin:auto;">
+                    <p>Kem dưỡng da Lovkin - Green tea</p>
+                    <div class="price row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>590.000 đ</p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>1.590.000 đ</p>
+                        </div>
+                    </div>
+                    <div class="review row align-items-center">
+                        <div class="star row align-items-center">
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <p>(50 đánh giá)</p>
+                        </div>
+                        <button>
+                            <p>XEM NGAY</p>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="./detail.html" class="col-xl-3 col-lg-6 col-md-6 col-xs-12">
+                <div class="cleansing__item">
+                    <img src="./img/Group 37453.png" alt="" width="90%" style="object-fit: cover; margin:auto;">
+                    <p>Kem dưỡng da Lovkin - Green tea</p>
+                    <div class="price row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>590.000 đ</p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>1.590.000 đ</p>
+                        </div>
+                    </div>
+                    <div class="review row align-items-center">
+                        <div class="star row align-items-center">
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                            <p>(50 đánh giá)</p>
+                        </div>
+                        <button>
+                            <p>XEM NGAY</p>
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <button class="more-product">
+            Xem thêm sản phẩm
+        </button>
+    </div>
+    <!-- End related product -->
+    <!-- Footer -->
+    <footer>
+        <div class="title">
+            <a href="./intro.html">
+                <h6>GIỚI THIỆU LOVKIN</h6>
+            </a>
+            <a href="#">
+                <h6>HƯỚNG DẪN MUA HÀNG</h6>
+            </a>
+            <a href="#">
+                <h6>QUY ĐỊNH BẢO MẬT</h6>
+            </a>
+            <a href="./blog.html">
+                <h6>TIN TỨC VÀ SỰ KIỆN</h6>
+            </a>
+        </div>
+        <div class="detail row justify-content-between">
+            <div class="col-xl-5 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="left">
+                    <img src="./img/logo.png" alt="">
+                    <p class="pt-3">Được phân phối chính thức bởi</p>
+                    <h6>CÔNG TY TNHH SOJI LABS</h6>
+                    <p class="py-2">
+                        <span>Trụ sở: </span>Tầng 10, tòa nhà Phước Thành, 199 Điện Biên Phủ, Phường 15, Quận Bình
+                        Thạnh, Thành phố Hồ Chí Minh,Việt Nam
+                    <div class="contact">
+                        <span class="pr-2"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>shop@soji.asia</span>
+                        <span><i class="fa fa-phone pr-2" aria-hidden="true"></i>028 7307 0789</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="mid">
+                    <p>Tải App SOJI LABS</p>
+                    <div class="store row">
+                        <a href="">
+                            <img src="./img/apple-store.PNG" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/ch-play.PNG" alt="">
+                        </a>
+                    </div>
+                    <p class="pb-3">Gian hàng SOJI LABS </p>
+                    <div class="row social">
+                        <a href="">
+                            <img src="./img/logo-lazada.png" alt="">
+                        </a>
+                        <a href="l">
+                            <img class="sendo" src="./img/logo-sendo-600x209.png" alt="">
+                        </a>
+                        <a href="">
+                            <img class="tiki" src="./img/logo-tiki.png" alt="">
+                        </a>
+                    </div>
+                    <div class="row social">
+                        <a href="">
+                            <img class="pr-3" src="./img/logo-shopee.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/LOGO-yes24.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="right">
+                    <p class="pb-3">Kết nối với LOVKIN</p>
+                    <div class="social row">
+                        <a href="" target="">
+                            <img src="./img/facebook.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/youtube.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/instagram.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/whatsapp.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/twitter.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="pb-3">Chứng nhận Bộ Công Thương</p>
+                    <img src="./img/bo-cong-thuong.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End footer -->
+    <!-- Modal dang nhap -->
+    <div class="modal fade" id="dangnhap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="
+                        emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal dang ky -->
+    <div class="modal fade" id="dangky" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng ký</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="
+                        emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nhập lại mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex=1;console.log(slideIndex);showDivs(slideIndex);function plusDivs(n){showDivs(slideIndex+=n);}
+        function currentDiv(n){showDivs(slideIndex=n);}
+        function showDivs(n){var i;var x=document.getElementsByClassName("my-slides");var dots=document.getElementsByClassName("btn-img");if(n>x.length){slideIndex=1}
+        if(n<1){slideIndex=x.length}
+        for(i=0;i<x.length;i++){x[i].style.display="none";}
+        for(i=0;i<dots.length;i++){dots[i].className=dots[i].className.replace("w3-red","");}
+        x[slideIndex-1].style.display="block";dots[slideIndex-1].className+="w3-red";}
+        var soluong=Number(document.getElementById("soluong").innerHTML);function minus(){soluong--;document.getElementById("soluong").innerHTML=soluong;var num=document.getElementById("soluong").innerHTML;if(num==0){document.getElementById('minus').setAttribute('disabled','disabled');}}
+        function plus(){soluong++;document.getElementById("soluong").innerHTML=soluong;document.getElementById('minus').removeAttribute('disabled');}
+    </script>
+    <script src="./js/jquery-min.js"></script>
+    <script src="./js/boostrap.js"></script>
+    <script src="./js/popper-min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+
+</html>

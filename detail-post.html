@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lov'kin</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon-lovkin.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/js-util.js">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/boostrap.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- Navbar mobile -->
+        <nav class="navbar navbar-mobile navbar-expand-lg navbar-light">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-10">
+                <a class="navbar-brand" href="./index.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <div class="col-7">
+                <header>
+                    <a class="logo" href="./index.html">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                    <div class="search">
+                        <input type="text" placeholder="Nhập từ khóa bạn đang tìm kiếm...">
+                        <span><i class="fa fa-search"></i></span>
+                    </div>
+                    <div class="user">
+                        <span><i class="fa fa-user-circle-o fa-2x"></i></span>
+                        <div class="text">
+                            <p>Xin chào bạn!.</p>
+                            <p><button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button><span
+                                    class="pl-1 pr-1">/</span>
+                                <button data-toggle="modal" data-target="#dangky">Đăng ký</button></p>
+                        </div>
+                    </div>
+                    <div class="shopping-cart">
+                        <a href="./cart.html">
+                            <button type="button" class="btn" style="position: relative;">
+                                <span><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></span>
+                                <span class="badge badge-danger">0</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="languages dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="./img/vietnam-flag.png" alt="">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">
+                                <img src="./img/vietnam-flag.png" alt="">
+                                <p class="pl-2">Tiếng Việt</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./img/korea-flag.png" alt="">
+                                <p class="pl-2">Korean</p>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="col-2">
+                <button id="btn-1" class="navbar-toggler d-block" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation" onclick="animationIn()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="btn-2" class="navbar-toggler d-none" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                    aria-label="Toggle navigation" onclick="animationOut()" style="color: #FFFFFF;">
+                    <span class="fa fa-times"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="blur">
+                    <ul id="navBar" class="navbar-nav mr-auto mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cleansing.html">CLEANSING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MAKE UP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SKINCARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BODYCARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./intro.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">BLOG</a>
+                        </li>
+                        <div class="user pt-3 border-top">
+                            <span class="pb-3"><i class="fa fa-user-circle-o fa-2x"></i></span>
+                            <div class="text">
+                                <p>Xin chào bạn!.</p>
+                                <button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button>
+                                <button data-toggle="modal" data-target="#dangky">Đăng ký</button>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End navbar mobile-->
+        <!-- Header -->
+        <header>
+            <a class="logo" href="./index.html">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Nhập từ khóa bạn đang tìm kiếm...">
+                <span><i class="fa fa-search"></i></span>
+            </div>
+            <div class="user">
+                <span><i class="fa fa-user-circle-o fa-2x"></i></span>
+                <div class="text">
+                    <p>Xin chào bạn!.</p>
+                    <p><button data-toggle="modal" data-target="#dangnhap">Đăng nhập</button><span
+                            class="pl-1 pr-1">/</span>
+                        <button data-toggle="modal" data-target="#dangky">Đăng ký</button></p>
+                </div>
+            </div>
+            <div class="shopping-cart">
+                <a href="./cart.html">
+                    <button type="button" class="btn" style="position: relative;">
+                        <span><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></span>
+                        <span class="badge badge-danger">0</span>
+                    </button>
+                </a>
+            </div>
+            <div class="languages dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="./img/vietnam-flag.png" alt="">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">
+                        <img src="./img/vietnam-flag.png" alt="">
+                        <p class="pl-2">Tiếng Việt</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./img/korea-flag.png" alt="">
+                        <p class="pl-2">Korean</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-pc navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cleansing.html">CLEANSING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MAKE UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SKINCARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BODYCARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./intro.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End navbar -->
+    </div>
+    <!-- End header -->
+
+    <!-- Link -->
+    <div class="link">
+        <a href=""><span><i class="fa fa-user" aria-hidden="true"></i> Hoàng Trinh</span></a>
+        <span><i class="fa fa-calendar" aria-hidden="true"></i> 10/04/2020</span>
+        <a href=""> <span class="blog">Blog
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                Giải đáp thắc mắc giảm cân không hiệu quả từ chuyên gia</span></a>
+    </div>
+    <!-- End link -->
+
+    <!-- Content post -->
+    <div class="content-post row">
+        <div class="text col-xl-8 col-lg-12 col-md-12 text-center">
+            <h5>Dưỡng Da Thật Dễ Dàng Với Các Phương Pháp Từ Thiên Nhiên</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h6># Why do we use it?</h6>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content
+                here, content here', making it look like readable English. Many desktop publishing packages and web page
+                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
+                many web sites still in their
+                infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                (injected humour and the like).</p>
+            <img src="./img/Image 25.png" alt="">
+            <h6># Where does it come from?</h6>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia,
+                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going
+                through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+                comes from sections 1.10.32 and 1.10.33
+                of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+                book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem
+                Ipsum, "Lorem ipsum dolor sit
+                amet..", comes from a line in section 1.10.32.</p>
+            <img src="./img/Image 26.png" alt="">
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+                original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.</p>
+            <h6>#The standard Lorem Ipsum passage, used since the 1500s</h6>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p> <br>
+            <p class="span">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</p>
+            <p>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas
+                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi
+                tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                Quis autem vel eum iure reprehenderit
+                qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                voluptas nulla pariatur?"</p>
+        </div>
+        <!-- Side bar -->
+        <div class="side-bar col-xl-4 col-lg-12 col-md-12 sticky-top">
+            <div class="title d-flex align-items-center justify-content-start">
+                <hr>
+                <p>SẢN PHẨM GỢI Ý</p>
+            </div>
+            <div class="item d-flex align-items-center">
+                <img src="./img/Image 41.png" alt="" style="width: 130px; height: 130px;object-fit: cover;">
+                <div class="ml-3">
+                    <p style="font-size: 1.2rem; font-weight: bold; color:#4F4F4F">WHITENING CREAM</p>
+                    <p class="py-2" style="font-size: 1.1rem; color:#686868">Whitening Cream dưỡng trắng sáng da Lovkin
+                    </p>
+                    <div class="prices">
+                        <p>790.000 đ<span class="pl-3">1.380.000 đ</span></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="item d-flex align-items-center">
+                <img src="./img/Image 41.png" alt="" style="width: 130px; height: 130px;object-fit: cover;">
+                <div class="ml-3">
+                    <p style="font-size: 1.2rem; font-weight: bold; color:#4F4F4F">WHITENING CREAM</p>
+                    <p class="py-2" style="font-size: 1.1rem; color:#686868">Whitening Cream dưỡng trắng sáng da Lovkin
+                    </p>
+                    <div class="prices">
+                        <p>790.000 đ<span class="pl-3">1.380.000 đ</span></p>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/detail-banner.png"
+                style="width: 100%; height: 525px;object-fit:cover;margin:auto; margin-top: 20px;">
+        </div>
+        <!-- End side bar -->
+    </div>
+    <!-- End content post -->
+
+    <!-- Recommend -->
+    <div class="recommend">
+        <div class="title d-flex align-items-center justify-content-start">
+            <hr>
+            <p>CÓ THỂ BẠN QUAN TÂM</p>
+        </div>
+        <div class="recommend__item row">
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <img src="./img/Image 26.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MẸO TẨY TẾ BÀO CHẾ CHO DA VỚI NGUYÊN LIỆU TỪ TỰ NHIÊN</h5>
+                        <p class="card-text">We value our craft, have a deep passion for progression, and exist to solve
+                            challenges for brands we believe in. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <img src="./img/Image 26.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MẸO TẨY TẾ BÀO CHẾ CHO DA VỚI NGUYÊN LIỆU TỪ TỰ NHIÊN</h5>
+                        <p class="card-text">We value our craft, have a deep passion for progression, and exist to solve
+                            challenges for brands we believe in. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <img src="./img/Image 26.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MẸO TẨY TẾ BÀO CHẾ CHO DA VỚI NGUYÊN LIỆU TỪ TỰ NHIÊN</h5>
+                        <p class="card-text">We value our craft, have a deep passion for progression, and exist to solve
+                            challenges for brands we believe in. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <img src="./img/Image 26.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MẸO TẨY TẾ BÀO CHẾ CHO DA VỚI NGUYÊN LIỆU TỪ TỰ NHIÊN</h5>
+                        <p class="card-text">We value our craft, have a deep passion for progression, and exist to solve
+                            challenges for brands we believe in. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <img src="./img/Image 26.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MẸO TẨY TẾ BÀO CHẾ CHO DA VỚI NGUYÊN LIỆU TỪ TỰ NHIÊN</h5>
+                        <p class="card-text">We value our craft, have a deep passion for progression, and exist to solve
+                            challenges for brands we believe in. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End recommend -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="title">
+            <a href="./intro.html">
+                <h6>GIỚI THIỆU LOVKIN</h6>
+            </a>
+            <a href="#">
+                <h6>HƯỚNG DẪN MUA HÀNG</h6>
+            </a>
+            <a href="#">
+                <h6>QUY ĐỊNH BẢO MẬT</h6>
+            </a>
+            <a href="./blog.html">
+                <h6>TIN TỨC VÀ SỰ KIỆN</h6>
+            </a>
+        </div>
+        <div class="detail row justify-content-between">
+            <div class="col-xl-5 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="left">
+                    <img src="./img/logo.png" alt="">
+                    <p class="pt-3">Được phân phối chính thức bởi</p>
+                    <h6>CÔNG TY TNHH SOJI LABS</h6>
+                    <p class="py-2"><span>Trụ sở: </span>Tầng 10, tòa nhà Phước Thành, 199 Điện Biên Phủ, Phường 15,
+                        Quận Bình Thạnh, Thành phố Hồ Chí Minh,Việt Nam
+                    <div class="contact">
+                        <span class="pr-2"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>shop@soji.asia</span>
+                        <span><i class="fa fa-phone pr-2" aria-hidden="true"></i>028 7307 0789</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="mid">
+                    <p>Tải App SOJI LABS</p>
+                    <div class="store row">
+                        <a href="">
+                            <img src="./img/apple-store.PNG" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/ch-play.PNG" alt="">
+                        </a>
+                    </div>
+                    <p class="pb-3">Gian hàng SOJI LABS </p>
+                    <div class="row social">
+                        <a href="">
+                            <img src="./img/logo-lazada.png" alt="">
+                        </a>
+                        <a href="l">
+                            <img class="sendo" src="./img/logo-sendo-600x209.png" alt="">
+                        </a>
+                        <a href="">
+                            <img class="tiki" src="./img/logo-tiki.png" alt="">
+                        </a>
+                    </div>
+                    <div class="row social">
+                        <a href="">
+                            <img class="pr-3" src="./img/logo-shopee.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/LOGO-yes24.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-12 col-md-12 col-md-12 col-xs-12">
+                <div class="right">
+                    <p class="pb-3">Kết nối với LOVKIN</p>
+                    <div class="social row">
+                        <a href="" target="">
+                            <img src="./img/facebook.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/youtube.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/instagram.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/whatsapp.svg" alt="">
+                        </a>
+                        <a href="" target="">
+                            <img src="./img/twitter.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="pb-3">Chứng nhận Bộ Công Thương</p>
+                    <img src="./img/bo-cong-thuong.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Modal dang nhap -->
+    <div class="modal fade" id="dangnhap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal dang ky -->
+    <div class="modal fade" id="dangky" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng ký</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nhập lại mật khẩu</label>
+                            <input type="password" class="form-control" id="exampleInputPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-min.js"></script>
+    <script src="./js/boostrap.js"></script>
+    <script src="./js/popper-min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+
+</html>
